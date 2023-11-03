@@ -99,9 +99,18 @@ const handleJoin = function () {
   setResult(array.join(", "));
 };
 
+const divStyle = {
+  textAlign : "center",
+};
+
+const borderStyle = {
+  border : "1px solid red",
+  margin : "20px"
+}
+
 
   return (
-    <div>
+    <div style={divStyle}>
       <h1>Standard반 배열 API 테스트</h1>
       <input
         value={query}
@@ -127,11 +136,14 @@ const handleJoin = function () {
         <button onClick={handleJoin}>join</button>
 
       </div>
-      <div>
+      <div style={{
+        border : "1px solid black",
+        margin : "20px"
+      }}>
         <h3>원본배열</h3>
         <p>{array.join(", ")}</p>
       </div>
-      <div>
+      <div style={borderStyle}>
         <h3>결과물</h3>
         <p>{result}</p>
       </div>
